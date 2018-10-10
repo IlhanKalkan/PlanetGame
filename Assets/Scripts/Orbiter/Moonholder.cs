@@ -12,6 +12,9 @@ public class Moonholder : OrbiterHolder {
         selfRotateSpeed = moon.selfRotateSpeed;
         transform.localScale = moon.Size;
 
+        followthis = transform.parent.parent.GetComponentInChildren<Planetholder>().transform;
+        Debug.Log("found papa: " + followthis.ToString());
+
         xAxis = moon.xAxis;
         yAxis = moon.yAxis;
         orbitProgress = moon.orbitProgress;

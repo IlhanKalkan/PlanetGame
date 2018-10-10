@@ -2,6 +2,8 @@
 
 public abstract class OrbiterHolder : MonoBehaviour {
 
+    public Transform followthis;
+
     public float xAxis;
     public float yAxis;
     // for orbiting
@@ -33,7 +35,7 @@ public abstract class OrbiterHolder : MonoBehaviour {
             orbitProgress %= 1f;
         }
 
-        Vector3 p = transform.parent.transform.position;
+        Vector3 p = followthis.position;
         transform.position = new Vector3(p.x + orbitPos.x,p.y + 0, p.z + orbitPos.y);
     }
 

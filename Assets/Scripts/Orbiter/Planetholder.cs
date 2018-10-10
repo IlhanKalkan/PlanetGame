@@ -15,6 +15,9 @@ public class Planetholder : OrbiterHolder {
         selfRotateSpeed = planet.selfRotateSpeed;
         transform.localScale = planet.Size;
 
+        followthis = transform.parent.parent.GetComponentInChildren<SunHolder>().transform;
+        Debug.Log("found papa: " + followthis.ToString());
+
         xAxis = planet.xAxis;
         yAxis = planet.yAxis;
         orbitProgress = planet.orbitProgress;
