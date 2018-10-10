@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a694888e3936b8408f6bd258ec4938f, type: 3}
+  m_Name: Moon_Blue
+  m_EditorClassIdentifier: 
+  name: MoonBlue
+  material: {fileID: 2100000, guid: b41ca7b994a34ea4a8549350388d7cec, type: 2}
+  Size: {x: 1, y: 1, z: 1}
+  xAxis: 5
+  yAxis: 8
+  orbitProgress: 0.723
+  orbitPeriod: 90.2
+  xRotation: 0.529
+  yRotation: 0.402
+  zRotation: 0.759
+  selfRotateSpeed: 0

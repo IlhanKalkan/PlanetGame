@@ -18,6 +18,7 @@ MonoBehaviour:
   planets:
   - {fileID: 11400000, guid: 163bd590fa7f58946942d6108f2de638, type: 2}
   - {fileID: 11400000, guid: 5c10d0adce0343941baa064b036de2af, type: 2}
+  - {fileID: 11400000, guid: 0a1a8489202b7c646b1c65f6ba3de706, type: 2}
   xRotation: 0.588
   yRotation: 0.297
   zRotation: 0.23

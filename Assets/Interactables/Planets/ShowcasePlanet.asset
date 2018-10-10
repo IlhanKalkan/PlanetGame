@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a29078f393a244dbeb181c0d4be2de, type: 3}
+  m_Name: ShowcasePlanet
+  m_EditorClassIdentifier: 
+  name: ShowcasePlanet
+  material: {fileID: 2100000, guid: 5ce9eefe9a915a1489921fb05b711df3, type: 2}
+  Size: {x: 2, y: 2, z: 2}
+  xAxis: 56
+  yAxis: 44
+  orbitProgress: 0
+  orbitPeriod: 62.5
+  xRotation: 0.177
+  yRotation: 0.383
+  zRotation: 0.743
+  selfRotateSpeed: 3
+  moons:
+  - {fileID: 11400000, guid: 9af6fa8f783db2243bae6fdd7643d1d9, type: 2}
+  - {fileID: 11400000, guid: 3a2546960df262f4d8e0ecaf162a4bc9, type: 2}
+  - {fileID: 11400000, guid: cd848952d7543e943b27892dea67580a, type: 2}
+  - {fileID: 11400000, guid: e339a568ad13e7045b7d3bca6d9bf8aa, type: 2}
