@@ -14,10 +14,10 @@ public class Planetholder : OrbiterHolder {
         rotation = new Vector3(planet.xRotation, planet.yRotation, planet.zRotation);
         selfRotateSpeed = planet.selfRotateSpeed;
         transform.localScale = planet.Size;
-        Debug.Log("planet: " + planet.name.ToString());
+        //Debug.Log("planet: " + planet.name.ToString());
 
         followthis = transform.parent.parent.GetComponentInChildren<SunHolder>().transform;
-        Debug.Log("found papa: " + followthis.ToString());
+        //Debug.Log("found papa: " + followthis.ToString());
 
         xAxis = planet.xAxis;
         yAxis = planet.yAxis;
