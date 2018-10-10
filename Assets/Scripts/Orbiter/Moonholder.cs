@@ -8,7 +8,6 @@ public class Moonholder : OrbiterHolder {
     {
         GetComponent<Renderer>().material = moon.material; // set material to planet's material
         rotation = new Vector3(moon.xRotation, moon.yRotation, moon.zRotation);
-        Debug.Log(rotation.ToString());
         selfRotateSpeed = moon.selfRotateSpeed;
         transform.localScale = moon.Size;
 

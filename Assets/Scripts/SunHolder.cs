@@ -21,6 +21,7 @@ public class SunHolder : MonoBehaviour {
         GameManager m = GameManager.instance;
         foreach(Planet p in sun.planets)
         {
+            Debug.Log("found planet in sun.planets:" + p.name.ToString());
             goPlanets.Add(m.instantiate(transform, p));
         }
 	}

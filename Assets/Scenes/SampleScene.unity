@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 0.85882354, b: 0.69411767, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: fde51bd759d0a834eb5dd48e631e90e9, type: 2}
   m_HaloStrength: 0.5
@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &170076734
 Light:
   m_ObjectHideFlags: 0
@@ -283,9 +283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e82fc46ab8f1f49bb1327141ae29e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetPrefab: {fileID: 1357807966147642, guid: 7dedc9aaf7127b440b32f3897bce5680,
+  planetPrefab: {fileID: 1887505025608698, guid: 9baa9a1701db3184895b446a697af1dd,
     type: 2}
-  moonPrefab: {fileID: 1952271011392556, guid: 582f8d377a703a8408450b5a8796b0b5, type: 2}
+  moonPrefab: {fileID: 1433380172974878, guid: 39b09a7d6fa8254478a6796703d8102d, type: 2}
 --- !u!4 &1256780100
 Transform:
   m_ObjectHideFlags: 0

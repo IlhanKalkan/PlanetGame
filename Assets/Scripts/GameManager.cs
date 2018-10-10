@@ -17,10 +17,10 @@ public class GameManager : MonoBehaviour {
         GameObject planet = (GameObject)Instantiate(planetPrefab, Vector3.zero, Quaternion.identity) as GameObject;
         planet.transform.parent = parent.parent;
         GameObject p = planet.transform.GetChild(0).gameObject;
-        p.GetComponent<Planetholder>().Initialize();
         p.GetComponent<Planetholder>().planet = objectPlanet;
+        p.GetComponent<Planetholder>().Initialize();
         p.name = objectPlanet.name;
-        Debug.Log("Planet initialized: " + planet.name);
+        //Debug.Log("Planet initialized: " + planet.name);
 
         return planet;
     }
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour {
         m.GetComponent<Moonholder>().moon = objectMoon;
         m.GetComponent<Moonholder>().Initialize();
         m.name = objectMoon.name;
-        Debug.Log("Moon initialized:  " + moon.name);
+        //Debug.Log("Moon initialized:  " + moon.name);
 
         return moon;
     }
