@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a29078f393a244dbeb181c0d4be2de, type: 3}
+  m_Name: BasePlanet
+  m_EditorClassIdentifier: 
+  name: BasePlanet
+  material: {fileID: 2100000, guid: c5e9f624ebf23cc47ba4d3bdaf17f43a, type: 2}
+  Size: {x: 1, y: 1, z: 1}
+  xAxis: 1
+  yAxis: 3
+  orbitProgress: 0.079
+  orbitPeriod: 90.4
+  xRotation: 0.326
+  yRotation: 0.147
+  zRotation: 0.629
+  selfRotateSpeed: 1
+  moons:
+  - {fileID: 11400000, guid: e339a568ad13e7045b7d3bca6d9bf8aa, type: 2}
+  - {fileID: 11400000, guid: cd848952d7543e943b27892dea67580a, type: 2}

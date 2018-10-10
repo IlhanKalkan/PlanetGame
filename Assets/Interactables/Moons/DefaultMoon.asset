@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a694888e3936b8408f6bd258ec4938f, type: 3}
+  m_Name: DefaultMoon
+  m_EditorClassIdentifier: 
+  name: DefaultMoon
+  material: {fileID: 2100000, guid: 3531c66a6d2b95340a77ac39a7ed3deb, type: 2}
+  Size: {x: 0.3, y: 0.3, z: 0.3}
+  xAxis: 2
+  yAxis: 3
+  orbitProgress: 0.257
+  orbitPeriod: 8.2
+  xRotation: 0.652
+  yRotation: 0
+  zRotation: 0.099
+  selfRotateSpeed: 3

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a694888e3936b8408f6bd258ec4938f, type: 3}
+  m_Name: BaseMoon
+  m_EditorClassIdentifier: 
+  name: BaseMoon
+  material: {fileID: 2100000, guid: 7efe2cc3aaf7e3c4b9951a0d154d72c9, type: 2}
+  Size: {x: 0.5, y: 0.55, z: 0.6}
+  xAxis: 1
+  yAxis: 2
+  orbitProgress: 0
+  orbitPeriod: 12.9
+  xRotation: 0.158
+  yRotation: 0.144
+  zRotation: 0.116
+  selfRotateSpeed: 100
