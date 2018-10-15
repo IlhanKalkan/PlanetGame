@@ -19,10 +19,15 @@ public class SunHolder : MonoBehaviour {
         selfRotateSpeed = sun.selfRotateSpeed;
 
         GameManager m = GameManager.instance;
-        foreach(Planet p in sun.planets)
+        for (int i = 0; i < sun.planets.Count; i++)
         {
             //Debug.Log("found planet in sun.planets:" + p.name.ToString());
-            goPlanets.Add(m.instantiate(transform, p));
+            Planet p = sun.planets[i];
+            GameObject g = m.instantiate(sun, transform, i, p);
+            if (g != null)
+            {
+                goPlanets.Add(g);
+            }
         }
 	}
 	

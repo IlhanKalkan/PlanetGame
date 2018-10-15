@@ -32,7 +32,11 @@ public class Planetholder : OrbiterHolder {
         gameManager = GameManager.instance;
         foreach(Moon moon in planet.moons)
         {
-            goMoons.Add(gameManager.instantiate(this.transform, moon));
+            GameObject g = gameManager.instantiate(this.transform, moon);
+            if (g != null)
+            {
+                goMoons.Add(g);
+            }
         }
     }   
 

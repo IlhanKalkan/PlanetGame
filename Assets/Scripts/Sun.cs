@@ -6,7 +6,11 @@ public class Sun : Interactable {
 
     public Vector3 position;
     public Vector3 Size;
+   
+    [Header("Orbits")]
     public List<Planet> planets;
+    public List<float> Xorbits;
+    public List<float> Yorbits;
 
     // rotating the orbiter
     [Header("Rotation")]
