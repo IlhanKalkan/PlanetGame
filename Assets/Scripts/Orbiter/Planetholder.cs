@@ -30,9 +30,11 @@ public class Planetholder : OrbiterHolder {
     private void Start()
     {
         gameManager = GameManager.instance;
-        foreach(Moon moon in planet.moons)
+        for (int i = 0; i < planet.moons.Count; i++)
         {
-            GameObject g = gameManager.instantiate(this.transform, moon);
+            //Debug.Log("found planet in sun.planets:" + p.name.ToString());
+            Moon m = planet.moons[i];
+            GameObject g = gameManager.instantiate(planet, transform, i, m);
             if (g != null)
             {
                 goMoons.Add(g);

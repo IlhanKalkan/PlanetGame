@@ -39,13 +39,27 @@ public class GameManager : MonoBehaviour {
         return planet;
     }
 
-    public GameObject instantiate(Transform parent, Moon objectMoon)
+    public GameObject instantiate(Planet planet, Transform parent, int nthMoon, Moon objectMoon)
     {
+        if (planet.Xorbits.Count < nthMoon)
+        {
+            return null;
+        }
+        if (planet.Yorbits.Count < nthMoon)
+        {
+            return null;
+        }
         GameObject moon = (GameObject)Instantiate(moonPrefab);
         moon.transform.SetParent(parent.parent);
         GameObject m = moon.transform.GetChild(0).gameObject;
-        m.GetComponent<Moonholder>().moon = objectMoon;
-        m.GetComponent<Moonholder>().Initialize();
+        var script = m.GetComponent<Moonholder>();
+        script.moon = objectMoon;
+        script.Initialize();
+        // Set orbit
+        script.xAxis = planet.Xorbits[nthMoon];
+        Debug.Log("moon " + objectMoon.name + " xorbit set to " + planet.Xorbits[nthMoon].ToString());
+        script.yAxis = planet.Yorbits[nthMoon];
+        Debug.Log("moon " + objectMoon.name + " yorbit set to " + planet.Yorbits[nthMoon].ToString());
         m.name = objectMoon.name;
         //Debug.Log("Moon initialized:  " + moon.name);
 

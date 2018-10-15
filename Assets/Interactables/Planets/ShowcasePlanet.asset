@@ -27,3 +27,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3a2546960df262f4d8e0ecaf162a4bc9, type: 2}
   - {fileID: 11400000, guid: cd848952d7543e943b27892dea67580a, type: 2}
   - {fileID: 11400000, guid: e339a568ad13e7045b7d3bca6d9bf8aa, type: 2}
+  Xorbits:
+  - 5
+  - 15
+  - 20
+  - 25
+  - 35
+  Yorbits:
+  - 5
+  - 12
+  - 23
+  - 25
+  - 54

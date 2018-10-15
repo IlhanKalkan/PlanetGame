@@ -4,7 +4,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Planet", menuName = "Interactables/Orbiter/Planet")]
 public class Planet : Orbiter
 {
+
+    [Header("Orbits")]
     public List<Moon> moons;
+    public List<float> Xorbits;
+    public List<float> Yorbits;
 
     private void Start()
     {
