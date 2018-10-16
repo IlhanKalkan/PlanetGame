@@ -6,6 +6,12 @@ public class CameraManager : MonoBehaviour {
 
     public static CameraManager instance;
 
+    [Header("Minimap")]
+    public GameObject minimapHolder;
+    public Camera minimapCam;
+    public Vector3 minimapCamDist = new Vector3(0, 30, 0);
+
+    [Header("Focus")]
     public Transform focus;
     public Vector3 distance;
     public Vector3 rotation;
@@ -23,6 +29,13 @@ public class CameraManager : MonoBehaviour {
     private void Start()
     {
         _distance = distance;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M)){
+            minimapHolder.SetActive(!minimapHolder.activeSelf);
+        }
     }
 
     private void LateUpdate()
@@ -48,6 +61,8 @@ public class CameraManager : MonoBehaviour {
         {
             transform.position = focus.position + _distance;
         }
+
+        minimapCam.transform.position = focus.position + minimapCamDist;
     }
 
     public void changeFocus(Transform t, float size)
