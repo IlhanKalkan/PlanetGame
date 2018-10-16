@@ -24,8 +24,9 @@ public class Planetholder : OrbiterHolder {
         ellipse = new Ellipse(xAxis, yAxis);
     }
     
-    private void Start()
+    private new void Start()
     {
+        base.Start();
         GameManager gameManager = GameManager.instance;
         for (int i = 0; i < planet.moons.Count; i++)
         {
@@ -43,5 +44,18 @@ public class Planetholder : OrbiterHolder {
     {
         CalculateOrbit();
         Rotate();
+    }
+
+    public override void OnClick()
+    {
+        Vector3 ps = planet.Size;
+        var size = Mathf.Max(Mathf.Max(ps.x, ps.y), ps.z);
+        camManager.changeFocus(transform, size);
+
+        ui.ClearMoonBtns();
+        foreach (GameObject g in goMoons)
+        {
+            ui.AddMoonBtn(g);
+        }
     }
 }

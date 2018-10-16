@@ -12,13 +12,20 @@ public abstract class OrbiterHolder : MonoBehaviour {
     public float orbitPeriod;
 
     public Ellipse ellipse;
-
+    public UIManager ui;
+    public CameraManager camManager;
 
     // for rotating
     public Vector3 rotation;
     public float selfRotateSpeed;
 
     public abstract void Initialize();
+
+    public void Start()
+    {
+        ui = UIManager.instance;
+        camManager = CameraManager.instance;
+    }
 
     public void CalculateOrbit()
     {
@@ -55,4 +62,6 @@ public abstract class OrbiterHolder : MonoBehaviour {
         this.xAxis = xAxis;
         this.yAxis = yAxis;
     }
+
+    public abstract void OnClick();
 }

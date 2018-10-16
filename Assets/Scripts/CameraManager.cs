@@ -12,7 +12,7 @@ public class CameraManager : MonoBehaviour {
 
     private Vector3 _distance;
 
-    private float maxZoom = 15;
+    private float minimalPossibleZoom = 1;
 
     // Use this for initialization
     void Awake()
@@ -31,7 +31,7 @@ public class CameraManager : MonoBehaviour {
         if (f > 0)
         {
             // if camera distance is bigger than the max allowed zoom, we are allowed to zoom in.
-            if (_distance.y > maxZoom)
+            if (_distance.y > minimalPossibleZoom)
             {
                 _distance *= 0.9f;
             }
@@ -53,19 +53,19 @@ public class CameraManager : MonoBehaviour {
     public void changeFocus(Transform t, float size)
     {
         reFocus(t);
-        maxZoom = size/2 + 0.5f;
+        minimalPossibleZoom = size/2 + 0.5f;
 
         // Readjust cam pos
-        if (_distance.y < maxZoom)
+        if (_distance.y < minimalPossibleZoom)
         {
-            _distance = new Vector3(0, maxZoom, - maxZoom / 12 * 16);
+            _distance = new Vector3(0, minimalPossibleZoom, - minimalPossibleZoom / 12 * 16);
         }
     }
 
     public void changeFocus(Transform t)
     {
         reFocus(t);
-        _distance = distance;
+        //_distance = distance;
     }
 
     private void reFocus(Transform t)

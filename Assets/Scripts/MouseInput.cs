@@ -40,12 +40,14 @@ public class MouseInput : MonoBehaviour {
                     Planetholder planetH = hit.transform.GetComponent<Planetholder>();
                     ui.ShowPopup(planetH);
                     camManager.changeFocus(hit.transform);
+                    planetH.OnClick();
                 }
                 else if (hit.transform.GetComponent<Moonholder>() != null)
                 {
                     Moonholder moonH = hit.transform.GetComponent<Moonholder>();
                     ui.ShowPopup(moonH);
                     camManager.changeFocus(hit.transform);
+                    moonH.OnClick();
                 }
             }
             else
