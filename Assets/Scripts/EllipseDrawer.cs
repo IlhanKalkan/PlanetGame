@@ -5,6 +5,7 @@ using UnityEngine;
 public class EllipseDrawer : MonoBehaviour {
 
     public GameObject linePrefab;
+    public Material lineMaterial;
     Vector3[] points;
 
     private void Start()
@@ -33,5 +34,6 @@ public class EllipseDrawer : MonoBehaviour {
         lr.loop = true;
         lr.startWidth = 0.5f;
         lr.endWidth = 0.5f;
+        lr.material = lineMaterial;
     }
 }
