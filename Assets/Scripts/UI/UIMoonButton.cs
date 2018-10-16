@@ -12,6 +12,6 @@ public class UIMoonButton : MonoBehaviour {
         Vector3 ms = script.moon.Size;
         var size = Mathf.Max(Mathf.Max(ms.x, ms.y), ms.z);
         CameraManager.instance.changeFocus(moonGameObject.transform.GetChild(0), size);
-        Debug.Log("onclick called from UI: " + moonGameObject.name + ".. size found: " + size);
+        //Debug.Log("onclick called from UI: " + moonGameObject.name + ".. size found: " + size);
     }
 }

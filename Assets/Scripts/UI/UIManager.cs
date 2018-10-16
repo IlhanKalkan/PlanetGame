@@ -6,10 +6,14 @@ public class UIManager : MonoBehaviour {
 
     public static UIManager instance;
 
+    [Header("OrbiterPanels")]
     public GameObject PlanetsPanel;
     public GameObject MoonsPanel;
     public Button PlanetBtn;
     public Button MoonBtn;
+
+    [Header("Pop-ups")]
+    public GameObject PopupPanel;
 
     [HideInInspector]
     public List<Button> PlanetBtns;
@@ -54,5 +58,20 @@ public class UIManager : MonoBehaviour {
         {
             Destroy(child.gameObject);
         }
+    }
+
+    public void ShowPopup(Planetholder p)
+    {
+        PopupPanel.SetActive(true);
+    }
+
+    public void ShowPopup(Moonholder m)
+    {
+        PopupPanel.SetActive(true);
+    }
+
+    public void HidePopup()
+    {
+        PopupPanel.SetActive(false);
     }
 }
