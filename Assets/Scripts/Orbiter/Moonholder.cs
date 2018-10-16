@@ -28,9 +28,10 @@ public class Moonholder : OrbiterHolder {
 
     public override void OnClick()
     {
+        ui.ShowPopup(this);
+
         Vector3 ms = moon.Size;
         var size = Mathf.Max(Mathf.Max(ms.x, ms.y), ms.z);
         CameraManager.instance.changeFocus(transform, size);
-        // Empty
     }
 }

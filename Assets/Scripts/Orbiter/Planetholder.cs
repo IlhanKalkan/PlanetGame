@@ -48,6 +48,8 @@ public class Planetholder : OrbiterHolder {
 
     public override void OnClick()
     {
+        ui.ShowPopup(this);
+
         Vector3 ps = planet.Size;
         var size = Mathf.Max(Mathf.Max(ps.x, ps.y), ps.z);
         camManager.changeFocus(transform, size);

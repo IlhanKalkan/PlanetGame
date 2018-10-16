@@ -9,12 +9,10 @@ public class MouseInput : MonoBehaviour {
     public LayerMask layermask;
     public Camera cam;
     private UIManager ui;
-    private CameraManager camManager;
 
     private void Start()
     {
         ui = UIManager.instance;
-        camManager = CameraManager.instance;
     }
 
     // Update is called once per frame
@@ -38,15 +36,11 @@ public class MouseInput : MonoBehaviour {
                 if (hit.transform.GetComponent<Planetholder>() != null)
                 {
                     Planetholder planetH = hit.transform.GetComponent<Planetholder>();
-                    ui.ShowPopup(planetH);
-                    camManager.changeFocus(hit.transform);
                     planetH.OnClick();
                 }
                 else if (hit.transform.GetComponent<Moonholder>() != null)
                 {
                     Moonholder moonH = hit.transform.GetComponent<Moonholder>();
-                    ui.ShowPopup(moonH);
-                    camManager.changeFocus(hit.transform);
                     moonH.OnClick();
                 }
             }

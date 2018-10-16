@@ -52,7 +52,9 @@ public class CameraManager : MonoBehaviour {
 
     public void changeFocus(Transform t, float size)
     {
-        reFocus(t);
+        focus = t;
+        Quaternion q = Quaternion.Euler(rotation);
+        transform.rotation.Set(q.x, q.y, q.z, q.w);
         minimalPossibleZoom = size/2 + 0.5f;
 
         // Readjust cam pos
@@ -60,18 +62,5 @@ public class CameraManager : MonoBehaviour {
         {
             _distance = new Vector3(0, minimalPossibleZoom, - minimalPossibleZoom / 12 * 16);
         }
-    }
-
-    public void changeFocus(Transform t)
-    {
-        reFocus(t);
-        //_distance = distance;
-    }
-
-    private void reFocus(Transform t)
-    {
-        focus = t;
-        Quaternion q = Quaternion.Euler(rotation);
-        transform.rotation.Set(q.x, q.y, q.z, q.w);
     }
 }
