@@ -18,13 +18,17 @@ public class UIManager : MonoBehaviour {
         instance = this;
     }
 
-    public void AddBtn(Planet planet)
+    public void AddBtn(GameObject planetGameObject)
     {
-        Button g = Instantiate(PlanetBtn);
-        var script = g.GetComponent<UIPlanetButton>();
-        script.planet = planet;
-        g.transform.SetParent(PlanetsPanel.transform, false);
-        var text = g.GetComponentInChildren<Text>();
-        text.text = planet.name;
+        // Create and initialize button
+        Button btn = Instantiate(PlanetBtn);
+        var script = btn.GetComponent<UIPlanetButton>();
+        script.planetGameObject = planetGameObject;
+        btn.transform.SetParent(PlanetsPanel.transform, false);
+
+        // Set button text
+        var text = btn.GetComponentInChildren<Text>();
+        Planet p = planetGameObject.GetComponentInChildren<Planetholder>().planet;
+        text.text = p.name;
     }
 }

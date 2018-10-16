@@ -179,11 +179,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!224 &190779313 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-    type: 2}
-  m_PrefabInternal: {fileID: 690036373}
 --- !u!1 &405906475
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +251,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -316,113 +312,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.12278779, y: -0.6963643, z: 0.12278779, w: 0.6963643}
-  m_LocalPosition: {x: 70, y: 20, z: 0}
+  m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
+  m_LocalPosition: {x: -2.5, y: 7.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20, y: -90, z: 0}
---- !u!1001 &690036373
-Prefab:
+  m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}
+--- !u!114 &534669906
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1412678519}
-    m_Modifications:
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224455760445601058, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b, type: 2}
-  m_IsPrefabAsset: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7757544cf320b408d64cce0fe2fd10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focus: {fileID: 0}
+  distance: {x: -2.5, y: 7.5, z: -10}
+  rotation: {x: 50, y: -90, z: 0}
 --- !u!1 &1070106134
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +462,7 @@ GameObject:
   - component: {fileID: 1412678520}
   - component: {fileID: 1412678522}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PlanetsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -567,8 +477,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 190779313}
+  m_Children: []
   m_Father: {fileID: 1523464967}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -906,8 +815,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d42f2bba1a425945833bee625561816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  c: {fileID: 0}
-  PlanetBtn: {fileID: 0}
+  PlanetsPanel: {fileID: 1412678518}
+  PlanetBtn: {fileID: 114855726091727450, guid: 4df47c95bdaf5d84a82b2cfb209d2e1b,
+    type: 2}
   PlanetBtns: []
 --- !u!4 &2029823275
 Transform:

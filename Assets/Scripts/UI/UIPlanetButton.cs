@@ -2,11 +2,12 @@
 
 public class UIPlanetButton : MonoBehaviour {
 
-    public Planet planet;
+    public GameObject planetGameObject;
 
     public void OnClick()
     {
-        Debug.Log("onclick called");
+        Debug.Log("onclick called from UI: " + planetGameObject.name);
+        CameraManager.instance.changeFocus(planetGameObject.transform.GetChild(0));
     }
 	
 }

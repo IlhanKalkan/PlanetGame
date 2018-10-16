@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bea2c9ec35c6d4ca909cae5d056f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planet: {fileID: 0}
+  planetGameObject: {fileID: 0}
 --- !u!114 &114855726091727450
 MonoBehaviour:
   m_ObjectHideFlags: 1
