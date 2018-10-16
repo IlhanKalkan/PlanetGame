@@ -14,11 +14,11 @@ MonoBehaviour:
   name: BaseMoon
   material: {fileID: 2100000, guid: 7efe2cc3aaf7e3c4b9951a0d154d72c9, type: 2}
   Size: {x: 0.5, y: 0.55, z: 0.6}
-  xAxis: 1
-  yAxis: 2
+  xAxis: 0
+  yAxis: 0
   orbitProgress: 0
   orbitPeriod: 12.9
   xRotation: 0.158
   yRotation: 0.144
   zRotation: 0.116
-  selfRotateSpeed: 100
+  selfRotateSpeed: 6

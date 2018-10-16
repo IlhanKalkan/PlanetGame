@@ -14,8 +14,8 @@ MonoBehaviour:
   name: BasePlanet
   material: {fileID: 2100000, guid: c5e9f624ebf23cc47ba4d3bdaf17f43a, type: 2}
   Size: {x: 1, y: 1, z: 1}
-  xAxis: 10
-  yAxis: 20
+  xAxis: 0
+  yAxis: 0
   orbitProgress: 0.079
   orbitPeriod: 90.4
   xRotation: 0.326

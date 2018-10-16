@@ -14,11 +14,11 @@ MonoBehaviour:
   name: DefaultMoon
   material: {fileID: 2100000, guid: 3531c66a6d2b95340a77ac39a7ed3deb, type: 2}
   Size: {x: 0.3, y: 0.3, z: 0.3}
-  xAxis: 2
-  yAxis: 3
+  xAxis: 0
+  yAxis: 0
   orbitProgress: 0.257
   orbitPeriod: 8.2
   xRotation: 0.652
-  yRotation: 0
+  yRotation: 0.032
   zRotation: 0.099
-  selfRotateSpeed: 3
+  selfRotateSpeed: 20

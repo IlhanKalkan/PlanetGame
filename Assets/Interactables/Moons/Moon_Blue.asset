@@ -14,8 +14,8 @@ MonoBehaviour:
   name: MoonBlue
   material: {fileID: 2100000, guid: b41ca7b994a34ea4a8549350388d7cec, type: 2}
   Size: {x: 1, y: 1, z: 1}
-  xAxis: 5
-  yAxis: 8
+  xAxis: 0
+  yAxis: 0
   orbitProgress: 0.723
   orbitPeriod: 90.2
   xRotation: 0.529

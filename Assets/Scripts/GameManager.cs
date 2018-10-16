@@ -57,9 +57,9 @@ public class GameManager : MonoBehaviour {
         script.Initialize();
         // Set orbit
         script.xAxis = parentPlanet.Xorbits[nthMoon];
-        //Debug.Log("moon " + objectMoon.name + " xorbit set to " + parentPlanet.Xorbits[nthMoon].ToString());
+        Debug.Log("moon " + objectMoon.name + " xorbit set to " + parentPlanet.Xorbits[nthMoon].ToString());
         script.yAxis = parentPlanet.Yorbits[nthMoon];
-        //Debug.Log("moon " + objectMoon.name + " yorbit set to " + parentPlanet.Yorbits[nthMoon].ToString());
+        Debug.Log("moon " + objectMoon.name + " yorbit set to " + parentPlanet.Yorbits[nthMoon].ToString());
         m.name = objectMoon.name;
         //Debug.Log("Moon initialized:  " + moon.name);
 

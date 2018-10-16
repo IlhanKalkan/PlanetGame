@@ -14,8 +14,8 @@ MonoBehaviour:
   name: Moon_DarkBlue
   material: {fileID: 2100000, guid: 03eec1de7856d9b459a377bd30fe6f65, type: 2}
   Size: {x: 3, y: 3, z: 3}
-  xAxis: 12
-  yAxis: 9
+  xAxis: 0
+  yAxis: 0
   orbitProgress: 0.917
   orbitPeriod: 10.3
   xRotation: 0.608
