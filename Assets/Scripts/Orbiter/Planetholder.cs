@@ -7,6 +7,7 @@ public class Planetholder : OrbiterHolder {
     
     private List<GameObject> goMoons = new List<GameObject>();
     private GameManager gameManager;
+    private UIManager uiManager;
 
     public override void Initialize()
     {

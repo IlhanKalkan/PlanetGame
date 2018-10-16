@@ -19,6 +19,7 @@ public class SunHolder : MonoBehaviour {
         selfRotateSpeed = sun.selfRotateSpeed;
 
         GameManager m = GameManager.instance;
+        UIManager ui = UIManager.instance;
         for (int i = 0; i < sun.planets.Count; i++)
         {
             //Debug.Log("found planet in sun.planets:" + p.name.ToString());
@@ -27,6 +28,7 @@ public class SunHolder : MonoBehaviour {
             if (g != null)
             {
                 goPlanets.Add(g);
+                ui.AddBtn(sun.planets[i]);
             }
         }
 	}

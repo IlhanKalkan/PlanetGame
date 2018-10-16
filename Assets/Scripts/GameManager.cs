@@ -11,14 +11,14 @@ public class GameManager : MonoBehaviour {
 	void Awake () {
         instance = this;
 	}
-	
-	public GameObject instantiate(Sun sun, Transform parent, int nthPlanet, Planet objectPlanet)
+
+    public GameObject instantiate(Sun parentSun, Transform parent, int nthPlanet, Planet objectPlanet)
     {
-        if (sun.Xorbits.Count < nthPlanet)
+        if (parentSun.Xorbits.Count < nthPlanet)
         {
             return null;
         }
-        if (sun.Yorbits.Count < nthPlanet)
+        if (parentSun.Yorbits.Count < nthPlanet)
         {
             return null;
         }
@@ -29,23 +29,23 @@ public class GameManager : MonoBehaviour {
         script.planet = objectPlanet;
         script.Initialize();
         // Set orbit
-        script.xAxis = sun.Xorbits[nthPlanet];
-        Debug.Log("planet " + objectPlanet.name + " xorbit set to " + sun.Xorbits[nthPlanet].ToString());
-        script.yAxis = sun.Yorbits[nthPlanet];
-        Debug.Log("planet " + objectPlanet.name + " yorbit set to " + sun.Yorbits[nthPlanet].ToString());
+        script.xAxis = parentSun.Xorbits[nthPlanet];
+        //Debug.Log("planet " + objectPlanet.name + " xorbit set to " + parentSun.Xorbits[nthPlanet].ToString());
+        script.yAxis = parentSun.Yorbits[nthPlanet];
+        //Debug.Log("planet " + objectPlanet.name + " yorbit set to " + parentSun.Yorbits[nthPlanet].ToString());
         p.name = objectPlanet.name;
         //Debug.Log("Planet initialized: " + planet.name);
 
         return planet;
     }
 
-    public GameObject instantiate(Planet planet, Transform parent, int nthMoon, Moon objectMoon)
+    public GameObject instantiate(Planet parentPlanet, Transform parent, int nthMoon, Moon objectMoon)
     {
-        if (planet.Xorbits.Count < nthMoon)
+        if (parentPlanet.Xorbits.Count < nthMoon)
         {
             return null;
         }
-        if (planet.Yorbits.Count < nthMoon)
+        if (parentPlanet.Yorbits.Count < nthMoon)
         {
             return null;
         }
@@ -56,10 +56,10 @@ public class GameManager : MonoBehaviour {
         script.moon = objectMoon;
         script.Initialize();
         // Set orbit
-        script.xAxis = planet.Xorbits[nthMoon];
-        Debug.Log("moon " + objectMoon.name + " xorbit set to " + planet.Xorbits[nthMoon].ToString());
-        script.yAxis = planet.Yorbits[nthMoon];
-        Debug.Log("moon " + objectMoon.name + " yorbit set to " + planet.Yorbits[nthMoon].ToString());
+        script.xAxis = parentPlanet.Xorbits[nthMoon];
+        //Debug.Log("moon " + objectMoon.name + " xorbit set to " + parentPlanet.Xorbits[nthMoon].ToString());
+        script.yAxis = parentPlanet.Yorbits[nthMoon];
+        //Debug.Log("moon " + objectMoon.name + " yorbit set to " + parentPlanet.Yorbits[nthMoon].ToString());
         m.name = objectMoon.name;
         //Debug.Log("Moon initialized:  " + moon.name);
 
