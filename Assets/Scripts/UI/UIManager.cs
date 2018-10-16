@@ -63,11 +63,13 @@ public class UIManager : MonoBehaviour {
     public void ShowPopup(Planetholder p)
     {
         PopupPanel.SetActive(true);
+        PopupPanel.transform.GetChild(0).GetComponent<Text>().text = p.planet.name;
     }
 
     public void ShowPopup(Moonholder m)
     {
         PopupPanel.SetActive(true);
+        PopupPanel.transform.GetChild(0).GetComponent<Text>().text = m.moon.name;
     }
 
     public void HidePopup()
