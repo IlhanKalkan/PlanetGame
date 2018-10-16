@@ -27,7 +27,6 @@ public class Planetholder : OrbiterHolder {
     private void Start()
     {
         GameManager gameManager = GameManager.instance;
-        UIManager ui = UIManager.instance;
         for (int i = 0; i < planet.moons.Count; i++)
         {
             //Debug.Log("found planet in sun.planets:" + p.name.ToString());

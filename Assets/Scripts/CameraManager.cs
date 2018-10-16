@@ -12,6 +12,8 @@ public class CameraManager : MonoBehaviour {
 
     private Vector3 _distance;
 
+    private float maxZoom = 15;
+
     // Use this for initialization
     void Awake()
     {
@@ -28,8 +30,8 @@ public class CameraManager : MonoBehaviour {
         var f = Input.GetAxis("Mouse ScrollWheel");
         if (f > 0)
         {
-            // do not allow camera to zoom in more than this
-            if (_distance.y > 1)
+            // if camera distance is bigger than the max allowed zoom, we are allowed to zoom in.
+            if (_distance.y > maxZoom)
             {
                 _distance *= 0.9f;
             }
@@ -48,10 +50,17 @@ public class CameraManager : MonoBehaviour {
         }
     }
 
-    public void changeFocus(Transform t)
+    public void changeFocus(Transform t, float size)
     {
         focus = t;
         Quaternion q = Quaternion.Euler(rotation);
         transform.rotation.Set(q.x, q.y, q.z, q.w);
+        maxZoom = size/2 + 0.5f;
+
+        // Readjust cam pos
+        if (_distance.y < maxZoom)
+        {
+            _distance = new Vector3(0, maxZoom, - maxZoom / 12 * 16);
+        }
     }
 }
