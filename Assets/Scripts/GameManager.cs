@@ -27,12 +27,9 @@ public class GameManager : MonoBehaviour {
         GameObject p = planet.transform.GetChild(0).gameObject;
         var script = p.GetComponent<Planetholder>();
         script.planet = objectPlanet;
-        script.Initialize();
         // Set orbit
-        script.xAxis = parentSun.Xorbits[nthPlanet];
-        //Debug.Log("planet " + objectPlanet.name + " xorbit set to " + parentSun.Xorbits[nthPlanet].ToString());
-        script.yAxis = parentSun.Yorbits[nthPlanet];
-        //Debug.Log("planet " + objectPlanet.name + " yorbit set to " + parentSun.Yorbits[nthPlanet].ToString());
+        script.setAxes(parentSun.Xorbits[nthPlanet], parentSun.Yorbits[nthPlanet]);
+        script.Initialize();
         p.name = objectPlanet.name;
         //Debug.Log("Planet initialized: " + planet.name);
 
@@ -54,13 +51,11 @@ public class GameManager : MonoBehaviour {
         GameObject m = moon.transform.GetChild(0).gameObject;
         var script = m.GetComponent<Moonholder>();
         script.moon = objectMoon;
-        script.Initialize();
         // Set orbit
-        script.xAxis = parentPlanet.Xorbits[nthMoon];
-        Debug.Log("moon " + objectMoon.name + " xorbit set to " + parentPlanet.Xorbits[nthMoon].ToString());
-        script.yAxis = parentPlanet.Yorbits[nthMoon];
-        Debug.Log("moon " + objectMoon.name + " yorbit set to " + parentPlanet.Yorbits[nthMoon].ToString());
+        script.setAxes(parentPlanet.Xorbits[nthMoon], parentPlanet.Yorbits[nthMoon]);
+        script.Initialize();
         m.name = objectMoon.name;
+        Debug.Log(m.name.ToString());
         //Debug.Log("Moon initialized:  " + moon.name);
 
         return moon;

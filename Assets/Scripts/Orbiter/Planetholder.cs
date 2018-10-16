@@ -18,8 +18,6 @@ public class Planetholder : OrbiterHolder {
         followthis = transform.parent.parent.GetComponentInChildren<SunHolder>().transform;
         //Debug.Log("found papa: " + followthis.ToString());
 
-        xAxis = planet.xAxis;
-        yAxis = planet.yAxis;
         orbitProgress = planet.orbitProgress;
         orbitPeriod = planet.orbitPeriod;
 

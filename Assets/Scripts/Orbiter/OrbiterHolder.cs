@@ -43,4 +43,16 @@ public abstract class OrbiterHolder : MonoBehaviour {
     {
         transform.Rotate(rotation * Time.deltaTime * selfRotateSpeed);
     }
+
+    public void setAxes(int xAxis, int yAxis)
+    {
+        this.xAxis = xAxis;
+        this.yAxis = yAxis;
+    }
+
+    public void setAxes(float xAxis, float yAxis)
+    {
+        this.xAxis = xAxis;
+        this.yAxis = yAxis;
+    }
 }

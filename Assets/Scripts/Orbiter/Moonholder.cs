@@ -14,8 +14,6 @@ public class Moonholder : OrbiterHolder {
         followthis = transform.parent.parent.GetComponentInChildren<Planetholder>().transform;
         //Debug.Log("found papa: " + followthis.ToString());
 
-        xAxis = moon.xAxis;
-        yAxis = moon.yAxis;
         orbitProgress = moon.orbitProgress;
         orbitPeriod = moon.orbitPeriod;
 
