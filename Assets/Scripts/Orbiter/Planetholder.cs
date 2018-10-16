@@ -5,9 +5,7 @@ public class Planetholder : OrbiterHolder {
 
     public Planet planet;
     
-    private List<GameObject> goMoons = new List<GameObject>();
-    private GameManager gameManager;
-    private UIManager uiManager;
+    public List<GameObject> goMoons = new List<GameObject>();
 
     public override void Initialize()
     {
@@ -30,7 +28,8 @@ public class Planetholder : OrbiterHolder {
     
     private void Start()
     {
-        gameManager = GameManager.instance;
+        GameManager gameManager = GameManager.instance;
+        UIManager ui = UIManager.instance;
         for (int i = 0; i < planet.moons.Count; i++)
         {
             //Debug.Log("found planet in sun.planets:" + p.name.ToString());

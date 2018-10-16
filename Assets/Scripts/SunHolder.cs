@@ -28,7 +28,7 @@ public class SunHolder : MonoBehaviour {
             if (g != null)
             {
                 goPlanets.Add(g);
-                ui.AddBtn(g);
+                ui.AddPlanetBtn(g);
             }
         }
 	}
