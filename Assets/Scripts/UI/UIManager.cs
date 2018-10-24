@@ -89,7 +89,7 @@ public class UIManager : MonoBehaviour {
     public void InitResource(Resource r)
     {
         GameObject UIResource = GameObject.Instantiate(ResourcePrefab);
-        UIResource.transform.GetChild(0).GetComponent<Image>().sprite = r.sprite;
+        UIResource.transform.GetChild(1).GetComponent<Image>().sprite = r.sprite;
         UIResource.GetComponentInChildren<Text>().text = r.amount.ToString();
         UIResource.transform.SetParent(ResourcesPanel.transform, false);
     }
