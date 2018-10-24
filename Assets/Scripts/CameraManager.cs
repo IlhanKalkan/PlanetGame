@@ -34,8 +34,13 @@ public class CameraManager : MonoBehaviour {
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.M)){
-            minimapHolder.SetActive(!minimapHolder.activeSelf);
+            ToggleMinimap();
         }
+    }
+
+    public void ToggleMinimap()
+    {
+        minimapHolder.SetActive(!minimapHolder.activeSelf);
     }
 
     private void LateUpdate()

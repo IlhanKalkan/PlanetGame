@@ -4,4 +4,6 @@
 public class Building : Interactable {
 
     public Recipe recipe;
+    public string Description;
+    public MeshRenderer mr;
 }

@@ -9,8 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a768401e39c1e8a4d9b1f430b4ad949a, type: 3}
-  m_Name: TestBuilding2
+  m_Name: TestBuilding
   m_EditorClassIdentifier: 
-  name: Hawhaw
+  name: Hahaaaa
   material: {fileID: 0}
   recipe: {fileID: 0}
+  Description: 
+  mr: {fileID: 0}
