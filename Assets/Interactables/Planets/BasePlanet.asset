@@ -22,6 +22,11 @@ MonoBehaviour:
   yRotation: 0.147
   zRotation: 0.629
   selfRotateSpeed: 1
+  maxBuildings: 0
+  currentBuildingAmt: 0
+  Buildings:
+  - {fileID: 11400000, guid: 9446f122ee8ad0f428df2c7d5e34e170, type: 2}
+  - {fileID: 11400000, guid: c54ad74fd7b51d443a196a1536c6cfb8, type: 2}
   moons:
   - {fileID: 11400000, guid: e339a568ad13e7045b7d3bca6d9bf8aa, type: 2}
   - {fileID: 11400000, guid: cd848952d7543e943b27892dea67580a, type: 2}

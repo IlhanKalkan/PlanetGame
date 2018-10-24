@@ -22,6 +22,11 @@ MonoBehaviour:
   yRotation: 0.578
   zRotation: 0.404
   selfRotateSpeed: 5
+  maxBuildings: 0
+  currentBuildingAmt: 0
+  Buildings:
+  - {fileID: 11400000, guid: 9446f122ee8ad0f428df2c7d5e34e170, type: 2}
+  - {fileID: 11400000, guid: c54ad74fd7b51d443a196a1536c6cfb8, type: 2}
   moons: []
   Xorbits: []
   Yorbits: []

@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour {
 
     [Header("Pop-ups")]
     public GameObject PopupPanel;
+    public GameObject textPrefab;
 
     [HideInInspector]
     public List<Button> PlanetBtns;
@@ -68,21 +69,43 @@ public class UIManager : MonoBehaviour {
     {
         PopupPanel.SetActive(true);
         PopupPanel.transform.GetChild(0).GetComponent<Text>().text = p.planet.name;
+
+        ClearImgChildren();
+        var t = PopupPanel.transform.GetChild(2);
+        foreach(Building b in p.planet.Buildings)
+        {
+            var txt = Instantiate(textPrefab) as GameObject;
+            txt.transform.SetParent(t, false);
+            txt.GetComponentInChildren<Text>().text = b.name;
+        }
     }
 
     public void ShowPopup(Moonholder m)
     {
         PopupPanel.SetActive(true);
         PopupPanel.transform.GetChild(0).GetComponent<Text>().text = m.moon.name;
+
+        ClearImgChildren();
+        var t = PopupPanel.transform.GetChild(2);
+        foreach (Building b in m.moon.Buildings)
+        {
+            var txt = Instantiate(textPrefab) as GameObject;
+            txt.transform.SetParent(t, false);
+            txt.GetComponentInChildren<Text>().text = b.name;
+        }
     }
 
-    public void ShowPopup(Building b)
+    private void ClearImgChildren()
     {
-        // Fill in code
+        foreach(Transform child in PopupPanel.transform.GetChild(2))
+        {
+            Destroy(child.gameObject);
+        }
     }
 
     public void HidePopup()
     {
+        ClearImgChildren();
         PopupPanel.SetActive(false);
     }
 
