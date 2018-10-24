@@ -12,6 +12,10 @@ public class UIManager : MonoBehaviour {
     public Button PlanetBtn;
     public Button MoonBtn;
 
+    [Header("Resource Panel")]
+    public GameObject ResourcesPanel;
+    public GameObject ResourcePrefab;
+
     [Header("Pop-ups")]
     public GameObject PopupPanel;
 
@@ -72,8 +76,21 @@ public class UIManager : MonoBehaviour {
         PopupPanel.transform.GetChild(0).GetComponent<Text>().text = m.moon.name;
     }
 
+    public void ShowPopup(Building b)
+    {
+        // Fill in code
+    }
+
     public void HidePopup()
     {
         PopupPanel.SetActive(false);
+    }
+
+    public void InitResource(Resource r)
+    {
+        GameObject UIResource = GameObject.Instantiate(ResourcePrefab);
+        UIResource.transform.GetChild(0).GetComponent<Image>().sprite = r.sprite;
+        UIResource.GetComponentInChildren<Text>().text = r.amount.ToString();
+        UIResource.transform.SetParent(ResourcesPanel.transform, false);
     }
 }

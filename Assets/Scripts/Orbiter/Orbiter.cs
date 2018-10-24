@@ -23,4 +23,11 @@ public abstract class Orbiter : Interactable {
     public float zRotation;
 
     public float selfRotateSpeed;
+
+    // For holding buildings
+    [Header("Buildings")]
+    [Range(0, 10)]
+    public int maxBuildings;
+    public int currentBuildingAmt;
+    public Building[] Buildings;
 }
