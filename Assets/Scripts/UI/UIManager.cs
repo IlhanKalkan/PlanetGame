@@ -20,6 +20,11 @@ public class UIManager : MonoBehaviour {
     public GameObject PopupPanel;
     public GameObject textPrefab;
 
+    [Header("Store Popup")]
+    public GameObject StorePanel;
+    public GameObject StoreItemsView;
+    public GameObject StoreItemPanel;
+
     [HideInInspector]
     public List<Button> PlanetBtns;
 
@@ -115,5 +120,34 @@ public class UIManager : MonoBehaviour {
         UIResource.transform.GetChild(1).GetComponent<Image>().sprite = r.sprite;
         UIResource.GetComponentInChildren<Text>().text = r.amount.ToString();
         UIResource.transform.SetParent(ResourcesPanel.transform, false);
+    }
+
+    public void ClearStore()
+    {
+        clearChildren(StoreItemsView);
+    }
+
+    public bool ToggleStore()
+    {
+        ClearStore();
+        StorePanel.SetActive(!StorePanel.activeSelf);
+        return StorePanel.activeSelf;
+    }
+
+    public void DrawShopItem(string name, string description, Recipe recipe)
+    {
+        var o = Instantiate(StoreItemPanel);
+        var texts = o.GetComponentsInChildren<Text>();
+        texts[0].text = name;
+        texts[1].text = description;
+        o.transform.SetParent(StoreItemsView.transform);
+    }
+
+    public void clearChildren(GameObject g)
+    {
+        foreach (Transform child in g.transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 }
